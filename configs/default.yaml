@@ -1,0 +1,46 @@
+# MG-STGNN Default Configuration
+# Matches Table 3 in the paper
+
+model:
+  hidden_dim: 64
+  num_layers: 2
+  tcn_layers: 4
+  tcn_dilation: [1, 2, 4, 8]
+  dropout: 0.15
+
+training:
+  optimizer: adamw
+  learning_rate: 3.0e-4
+  weight_decay: 1.0e-4
+  batch_size: 64
+  max_batches_per_epoch: 100
+  seeds: [42, 123, 7, 2024, 999]
+  phases:
+    - name: joint
+      epochs: 7
+    - name: ci_only
+      epochs: 5
+    - name: joint_fine
+      epochs: 2
+
+loss:
+  lambda_price: 1.5
+  lambda_ci: 1.0
+  lambda_corr: 0.1
+  lambda_sparse: 1.0e-3
+  type: smooth_l1
+
+data:
+  window_size: 24
+  countries: [AT, BE, CH, CZ, DE, DK, ES, FR, HU, IT, NL, NO, PL, SE, SK]
+  train_end: "2022-12-31"
+  val_end: "2023-06-30"
+  test_end: "2024-12-31"
+
+uncertainty:
+  mc_passes: 50
+  conformal_alpha: 0.10
+
+cbam:
+  tau: 50.0
+  gamma_levels: [0.0, 0.25, 0.50, 0.75, 1.0]
