@@ -63,24 +63,5 @@ The model processes 15 country nodes through:
 
 Followed by temporal convolutional encoding (TCN) and dual-target prediction heads.
 
-## Results Summary
-
-| Metric | MG-STGNN | Best Baseline |
-|---|---|---|
-| Price RMSE (EUR/MWh) | **24.47** | 25.96 (XGBoost) |
-| CI RMSE (kg CO₂/MWh) | **21.63** | 21.88 (XGBoost) |
-| Peak-RMSE | **49.68** | 57.90 (Spatial-lag) |
-
-## Citation
-```bibtex
-@article{shen2025mgstgnn,
-  title={Evaluating Carbon Border Adjustment Effects in Interconnected European Electricity Markets via Mechanism-Guided Graph Learning},
-  author={Shen, Jiachen and Shi, Jian and Wang, Dan and Han, Zhu},
-  journal={Applied Energy},
-  year={2025},
-  note={Under review}
-}
-```
-
 ## License
 This project is licensed under the MIT License — see `LICENSE` for details.
