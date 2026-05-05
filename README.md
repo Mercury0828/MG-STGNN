@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the code and data processing pipeline for the paper:
 
-**"Evaluating Carbon Border Adjustment Effects in Interconnected European Electricity Markets via Mechanism-Guided Graph Learning"**
+**"Mechanism-Guided Graph Learning for Carbon Border Policy Evaluation in Interconnected European Electricity Markets"**
 
 *Submitted to Applied Energy*
 
